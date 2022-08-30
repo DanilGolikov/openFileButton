@@ -128,9 +128,6 @@ public class IncludeControllerGui extends AbstractControllerGui implements Actio
 
 
         JPanel openPanel = new JPanel(new VerticalLayout());
-//        openPanel.setLayout(BorderLayout.EAST);
-
-
 
         JButton openButton = new JButton("Open File");
         openButton.addActionListener(this);
