@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="gui">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/src/main/java/libs/ApacheJMeter_components.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

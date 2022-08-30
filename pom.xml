@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>test.jmeter.plugin</groupId>
+    <artifactId>testGUI_3</artifactId>
+    <version>0.1.0</version>
+
+    <name>TestGUI_3</name>
+    <description>A simple guide to develop pulgin for JMeter - 开发Jmeter插件的一个简单示例</description>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.build.outputEncoding>UTF-8</project.build.outputEncoding>
+        <jdk.version>1.7</jdk.version>
+    </properties>
+
+    <dependencies>
+
+
+        <dependency>
+            <groupId>org.apache.jmeter</groupId>
+            <artifactId>ApacheJMeter_core</artifactId>
+            <version>5.4.3</version>
+            <scope>provided</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.jmeter</groupId>
+            <artifactId>ApacheJMeter_java</artifactId>
+            <version>5.4.3</version>
+            <scope>provided</scope>
+        </dependency>
+
+    </dependencies>
+
+    <build>
+
+        <!--
+
+        resources: 告诉maven源代码在哪里
+
+        resources: Locate the source code
+
+        -->
+
+        <resources>
+            <resource>
+                <directory>src/main/java</directory>
+                <includes>
+                    <include>**/*.properties</include>
+                </includes>
+            </resource>
+        </resources>
+
+        <!--
+
+        plugins:
+        1. maven-compiler-plugin: 必备插件，编译源码，更多内容：https://maven.apache.org/plugins/maven-compiler-plugin/
+        2. maven-shade-plugin: 推荐插件，将所有的内容集成到一个jar包中，更多内容：https://maven.apache.org/plugins/maven-shade-plugin/
+
+        plugins:
+        1. maven-compiler-plugin: Mandatory, compile the source, more info: https://maven.apache.org/plugins/maven-compiler-plugin/
+        2. maven-shade-plugin: Suggested, provides the capability to package the artifact in an uber-jar, more info: https://maven.apache.org/plugins/maven-shade-plugin/
+
+        -->
+
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.8.1</version>
+                <configuration>
+                    <source>${jdk.version}</source>
+                    <target>${jdk.version}</target>
+                    <optimize>true</optimize>
+                    <showDeprecation>true</showDeprecation>
+                    <showWarnings>true</showWarnings>
+                </configuration>
+            </plugin>
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-shade-plugin</artifactId>
+                <version>3.2.1</version>
+                <executions>
+                    <execution>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>shade</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>
