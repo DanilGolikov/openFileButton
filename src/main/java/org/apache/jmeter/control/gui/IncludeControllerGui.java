@@ -132,10 +132,12 @@ public class IncludeControllerGui extends AbstractControllerGui implements Actio
         JButton openButton = new JButton("Open File");
         openButton.addActionListener(this);
         openButton.setActionCommand("openJMX");
+        openButton.setToolTipText("Update: Golikov Daniil");
+
         openPanel.add(openButton);
 
 
-        openPanel.add(new JLabel("Update: Golikov Daniil"));
+        //openPanel.add(new JLabel("Update: Golikov Daniil"));
         add(openPanel);
 
 

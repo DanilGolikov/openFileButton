@@ -5,11 +5,11 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>test.jmeter.plugin</groupId>
-    <artifactId>testGUI_3</artifactId>
+    <artifactId>openFileButton</artifactId>
     <version>0.1.0</version>
 
-    <name>TestGUI_3</name>
-    <description>A simple guide to develop pulgin for JMeter - 开发Jmeter插件的一个简单示例</description>
+    <name>openFileButton</name>
+    <description></description>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
